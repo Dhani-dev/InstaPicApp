@@ -1,12 +1,38 @@
-body, app-login, app-sign-up{
-    font-family: 'Ubuntu', 'Courier New', Courier, monospace;
-    color:#023047;
-    background-color: black;
-    margin: 0px;
-    padding: 0px;
+*{
+    margin:0px;
+    padding:0px
+ }
+
+html, body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+app-root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+app-footer {
+    flex-shrink: 0;
+}
+
+body{
+    font-family: 'Ubuntu', 'Courier New', Courier, monospace;
+    color:#023047;
+    background-color: black;
+    margin: 0 auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -16,11 +42,22 @@ header {
     text-align: center;
     border-bottom: 1px solid #20EEFF;
     box-shadow: 0 0 1rem #20EEFF;
+    
 }
 
 header h1{
     text-shadow: 0 0 1rem white;
     text-align: center;
+}
+
+
+main {
+    flex: 1 0 auto;
+    padding: 10px 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
 
 form {
@@ -29,16 +66,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin: 0; 
-    padding: 0; 
-}
-
-main {
-    flex: 1;
-    padding: 10px 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0 
 }
 
 #profile-main {
@@ -158,3 +186,4 @@ footer {
     border-bottom: 1px solid #20EEFF;
     box-shadow: 0 0 1rem #20EEFF;
 }
+
