@@ -21,10 +21,6 @@ app-root {
     align-items: center;
 }
 
-app-footer {
-    flex-shrink: 0;
-}
-
 body{
     font-family: 'Ubuntu', 'Courier New', Courier, monospace;
     color:#023047;
@@ -52,7 +48,7 @@ header h1{
 
 
 main {
-    flex: 1 0 auto;
+    flex: 1;
     padding: 10px 10px; 
     display: flex;
     flex-direction: column;
@@ -187,3 +183,6 @@ footer {
     box-shadow: 0 0 1rem #20EEFF;
 }
 
+app-footer {
+    flex-shrink: 0;
+}
