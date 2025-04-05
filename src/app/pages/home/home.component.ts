@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  followers = 15;
+
+  /*seguir(){
+    //this.followers=this.followers+1;
+    this.followers++;
+  }*/
+
 }

@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'insta-pic-app';
 
-  showNav = false;
+  /*showNav = false;
   showHeader = true;
 
   constructor(private router:Router){
@@ -24,5 +24,5 @@ export class AppComponent {
         this.showHeader = event.url !== '/home';
       }
     })
-  }
+  }*/
 }

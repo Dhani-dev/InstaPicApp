@@ -28,7 +28,14 @@ export class LoginComponent {
       return;
     }
 
-    this.router.navigateByUrl('/home');
+    const user = this.loginForm.value;
+    const success = this.authService.login(user);
+
+    if(!!success){
+      this.router.navigateByUrl('/home');
+    }
+
+    //this.router.navigateByUrl('/home');
   }
 
 }
