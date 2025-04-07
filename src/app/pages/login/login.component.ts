@@ -32,7 +32,8 @@ export class LoginComponent {
     const success = this.authService.login(user);
 
     if(!!success){
-      this.router.navigateByUrl('/home');
+      const url = sessionStorage.getItem('redirecTo')||'home';
+      this.router.navigateByUrl(url);
     }
 
     //this.router.navigateByUrl('/home');

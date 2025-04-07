@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy{
   
   ngOnDestroy(): void {
     console.log('Este es OnDestroy');
-    Swal.fire({
+    /*Swal.fire({
           title: "Bye...",
           text: "Esta a punto de abandonar",
           width: 600,
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy{
             left top
             no-repeat
           `
-        });
+        });*/
   }
 
   /*seguir(){
