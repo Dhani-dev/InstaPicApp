@@ -6,7 +6,7 @@
              <span id="username-home">{{username||'Bienvenido'}}</span>
          </div>
          <div>
-          <span>10</span>
+          <span>{{publicaciones}}</span>
           <br/><span>Publicaciones</span>
           </div>
          <div>
@@ -19,7 +19,7 @@
           </div>
          <!--<button (click)="seguir()">Seguir</button>-->
     </section>
-    <section id="gallery">
+    <section id="gallery" #gallery>
          <img src="sitio1.jpg"/>
          <img src="sitio11.jpg"/>
          <img src="sitio3.jpg"/>
