@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor() { }
 
-  isSignedUser = signal(false);
+  isSignedUser = signal(this.isUserLogged());
 
   login(user:User):boolean{
     const userSrt = localStorage.getItem(user.username!); //Recupera un string
@@ -19,6 +19,7 @@ export class AuthService {
       const userDB:User = JSON.parse(userSrt);
 
       if(user.password===userDB.password){
+        sessionStorage.setItem('userLogged', JSON.stringify(userDB));
         this.isSignedUser.set(true);
         return true;
       }
@@ -40,13 +41,26 @@ export class AuthService {
   }   
 
   logout(){
+    sessionStorage.clear();
     this.isSignedUser.set(false);
+  }
+
+  getUser():User|null{
+    const userSrt = sessionStorage.getItem('userLogged');
+    if(userSrt){
+      return JSON.parse(userSrt);
+    }
+    return null;
   }
 
   registry(user:User){ //Es tipo User y este esta en user.interface.ts
     //console.log('Desde el servicio', user);
     localStorage.setItem(user.username!,JSON.stringify(user)); //setItem sirve para el identificador del objeto que se va guardar
+  }
 
+  private isUserLogged():boolean{
+    const userSrt = sessionStorage.getItem('userLogged');
+    return !!userSrt;
   }
 }
 
